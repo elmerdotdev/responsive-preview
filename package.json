@@ -1,0 +1,23 @@
+{
+  "name": "responsive-preview",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-sass": "node-sass assets/scss -o assets/css",
+    "watch-sass": "node-sass --watch assets/scss -o assets/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elmerdotdev/responsive-preview.git"
+  },
+  "author": "Elmer G. Balbin Jr.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elmerdotdev/responsive-preview/issues"
+  },
+  "homepage": "https://github.com/elmerdotdev/responsive-preview#readme",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
