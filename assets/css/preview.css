@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box; }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  overflow-x: hidden; }
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; }
+
+header {
+  max-height: 85px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.3rem;
+  background: #fff;
+  background: linear-gradient(to bottom, #fff 70%, #eee 100%);
+  z-index: 1;
+  box-shadow: 0px 0px 5px 0px #444; }
+  header .logo {
+    text-transform: uppercase; }
+  header .controls ul {
+    display: flex;
+    padding: 0;
+    list-style: none; }
+    header .controls ul li {
+      margin: 0 1rem;
+      color: #bbb;
+      font-size: 2rem;
+      cursor: pointer;
+      transition: color 0.3s ease-in-out; }
+      @media screen and (max-width: 400px) {
+        header .controls ul li {
+          margin: 0 0.5rem; } }
+      header .controls ul li.active {
+        color: #000; }
+  header .burger {
+    cursor: pointer; }
+    header .burger.active .line1 {
+      transform: rotate(45deg) translate(5px, 6px); }
+    header .burger.active .line2 {
+      opacity: 0; }
+    header .burger.active .line3 {
+      transform: rotate(-45deg) translate(5px, -7px); }
+    header .burger div {
+      width: 25px;
+      height: 3px;
+      margin: 5px;
+      background: #000;
+      opacity: 1;
+      transform: rotate(0) translate(0, 0);
+      transition: all 0.3s ease-in-out; }
+
+.canvas {
+  position: relative;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  background: #444; }
+  .canvas__wrapper {
+    width: 100%;
+    max-width: 100%;
+    background: #fff;
+    transition: all 0.3s ease-in; }
+    .canvas__wrapper.tablet {
+      max-width: 768px;
+      max-height: 1024px; }
+    .canvas__wrapper.mobile {
+      max-width: 360px;
+      max-height: 640px; }
+    .canvas__wrapper__preview {
+      width: 100%;
+      height: 100%; }
+  .canvas .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); }
+    .canvas .overlay .menu {
+      position: absolute;
+      top: 0;
+      right: -250px;
+      width: 250px;
+      height: 100%;
+      background: #fff;
+      transition: all 0.5s linear; }
+      .canvas .overlay .menu.active {
+        right: 0; }
+      .canvas .overlay .menu ul {
+        margin: 0;
+        padding: 0;
+        list-style: none; }
+        .canvas .overlay .menu ul li p {
+          position: relative;
+          padding: 0 1rem;
+          font-size: 0.9rem;
+          color: #666; }
+          .canvas .overlay .menu ul li p:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: #ccc;
+            margin-top: 1rem; }
+        .canvas .overlay .menu ul li a {
+          padding: 1.3rem;
+          display: block;
+          color: #000;
+          text-decoration: none;
+          text-align: center;
+          transition: all 0.3s ease-in-out; }
+          .canvas .overlay .menu ul li a:hover {
+            background: #e5e5e5; }

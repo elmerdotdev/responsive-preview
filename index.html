@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site Preview - ELMER.DEV</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/preview.css" />
+    <script
+      src="https://kit.fontawesome.com/2971c6f01f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo"><h1>Preview</h1></div>
+        <div class="controls">
+          <ul>
+            <li class="desktop active"><i class="fas fa-desktop"></i></li>
+            <li class="tablet"><i class="fas fa-tablet-alt"></i></li>
+            <li class="mobile"><i class="fas fa-mobile-alt"></i></li>
+          </ul>
+        </div>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </header>
+      <div class="canvas">
+        <div class="canvas__wrapper">
+          <iframe
+            src="default.html"
+            frameborder="0"
+            class="canvas__wrapper__preview"
+          ></iframe>
+        </div>
+        <div class="overlay" style="display: none;">
+          <nav class="menu">
+            <ul>
+              <li>
+                <p>
+                  <strong>Note:</strong> If it says "refused to connect", then
+                  that means the target website only allows iframe loading from
+                  their own domain.
+                </p>
+              </li>
+              <li><a href="https://projects.elmer.dev">Back to Projects</a></li>
+              <li>
+                <a href="https://elmer.dev" target="_blank">Main Portfolio</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/preview.js"></script>
+  </body>
+</html>
